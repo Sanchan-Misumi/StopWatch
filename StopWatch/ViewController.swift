@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
         
-    @IBOutlet var label: UILabel!
+    @IBOutlet var label1: UILabel!
+     @IBOutlet var label2: UILabel!
+    @IBOutlet var label3: UILabel!
     
     var count: Float = 0.0
     
     var timer: Timer = Timer()
+    
+    var number: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,17 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func lap () {
+        if timer.isValid, number == 0 {
+             label2.text = String(format: "%.2f", count)
+            number = number + 1
+        } else if timer.isValid && number == 1{
+             label3.text = String(format: "%.2f", count)
+            number = number - 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +67,7 @@ func up(){
     
     count = count + 0.01
     
-    label.text = String(format: "%.2f", count)
+    label1.text = String(format: "%.2f", count)
     
     
     
