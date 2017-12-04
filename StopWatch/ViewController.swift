@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var timer: Timer = Timer()
     
     var number: Int = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,6 @@ class ViewController: UIViewController {
 
     @IBAction func start () {
         if !timer.isValid {
-            
             timer = Timer.scheduledTimer(
                 timeInterval: 0.01,
                 target: self,
@@ -48,12 +48,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lap () {
-        if timer.isValid, number == 0 {
-             label2.text = String(format: "%.2f", count)
+        if timer.isValid && number == 0 {
+            label2.text = String(format: "%.2f")
             number = number + 1
         } else if timer.isValid && number == 1{
-             label3.text = String(format: "%.2f", count)
-            number = number - 1
+            label3.text = String(format: "%.2f")
+             number = number - 1
         }
     }
     
