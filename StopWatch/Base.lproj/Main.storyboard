@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" red="1" green="0.97986825700000002" blue="0.56699326880000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="lap"/>
                                 <connections>
-                                    <action selector="lap" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFH-PE-ZlR"/>
+                                    <action selector="lap" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXB-MD-BEr"/>
                                     <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojt-nT-7m9"/>
                                 </connections>
                             </button>

@@ -49,10 +49,10 @@ class ViewController: UIViewController {
     
     @IBAction func lap () {
         if timer.isValid && number == 0 {
-            label2.text = String(format: "%.2f")
+            label2.text = String(format: "%.2f", count)
             number = number + 1
         } else if timer.isValid && number == 1{
-            label3.text = String(format: "%.2f")
+            label3.text = String(format: "%.2f", count)
              number = number - 1
         }
     }
